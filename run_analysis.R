@@ -75,4 +75,4 @@ Table.Complete.Dataset$Activity <- Table.Activity[Table.Complete.Dataset$Activit
 ## From above, create a second, independent tidy dataset with the average of each variable for
 ##  each activity and each subject
 Table.Dataset.Average <- aggregate(.~Subj_ID+Activity, data = Table.Complete.Dataset, mean)
-
+write.table(Table.Dataset.Average, "AverageTestTrainData.txt", row.names = FALSE, col.names = TRUE)
